@@ -3,6 +3,7 @@ import time
 
 
 # ###### WORD FOR GUESSING ######
+#      It must be uppercase
 word = list('PYTHON')
 #################################
 
