@@ -5,7 +5,19 @@ import time
 # ###### WORD FOR GUESSING ######
 #      It must be uppercase
 word = list('PYTHON')
+guessed_letters = ['_' for i in word]
+guess = ''
+guesses = []
+mistakes = 0
 #################################
+screenWidth, screenHeight = 600, 600
+pygame.init()
+pygame.display.set_caption('Hangman')
+screen = pygame.display.set_mode((screenWidth, screenHeight))
+clock = pygame.time.Clock()
+
+FONT_1 = pygame.font.SysFont('Arial', 35, True)
+FONT_2 = pygame.font.SysFont('Arial', 60, True)
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -46,20 +58,6 @@ def draw_word(gword, pos, color=BLACK, size='small'):
     word_pos = word_block.get_rect()
     word_pos.center = pos
     screen.blit(word_block, word_pos)
-
-
-screenWidth, screenHeight = 600, 600
-pygame.init()
-pygame.display.set_caption('Hangman')
-clock = pygame.time.Clock()
-screen = pygame.display.set_mode((screenWidth, screenHeight))
-FONT_1 = pygame.font.SysFont('Arial', 35, True)
-FONT_2 = pygame.font.SysFont('Arial', 60, True)
-
-guessed_letters = ['_' for i in word]
-guess = ''
-guesses = []
-mistakes = 0
 
 
 def dead_scene():
