@@ -1,6 +1,6 @@
 # Hangman
 This game is made purely with the PyGame framework.  
-It's also my very first project done in PyGame.
+It's also my very first project done with PyGame.
 
 ![](banner.png)
 
